@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - REVIVE Beauty Salon</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>REVIVE</h2>
+                <span>Beauty Salon</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="salon-finder.html" class="nav-link">Find Us</a>
+                <a href="reviews.html" class="nav-link">Reviews</a>
+                <a href="gallery.html" class="nav-link active">Gallery</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Gallery Showcase</h1>
+            <p>Explore our work and get inspired by beautiful transformations</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="gallery-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="bridal">Bridal</button>
+                <button class="filter-btn" data-filter="makeup">Makeup</button>
+                <button class="filter-btn" data-filter="hair">Hair</button>
+                <button class="filter-btn" data-filter="facial">Facial</button>
+                <button class="filter-btn" data-filter="spa">Spa</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-grid-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Bridal Images -->
+                <div class="gallery-item" data-category="bridal">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1607774000480-de3f239fdd4c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxiZWF1dHklMjBzYWxvbnxlbnwwfHx8fDE3NTQxNTcwNjl8MA&ixlib=rb-4.1.0&q=85" alt="Bridal Makeup 1">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Bridal Makeup</h3>
+                                <p>Classic bridal look with traditional elements</p>
+                                <button class="view-btn" onclick="openLightbox(this.parentElement.parentElement.parentElement.querySelector('img'))">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Makeup Images -->
+                <div class="gallery-item" data-category="makeup">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1607774000480-de3f239fdd4c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxiZWF1dHklMjBzYWxvbnxlbnwwfHx8fDE3NTQxNTcwNjl8MA&ixlib=rb-4.1.0&q=85" alt="Evening Makeup">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Evening Makeup</h3>
+                                <p>Glamorous party look with bold eyes</p>
+                                <button class="view-btn" onclick="openLightbox(this.parentElement.parentElement.parentElement.querySelector('img'))">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Facial Images -->
+                <div class="gallery-item" data-category="facial">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxiZWF1dHklMjBzYWxvbnxlbnwwfHx8fDE3NTQxNTcwNjl8MA&ixlib=rb-4.1.0&q=85" alt="Facial Treatment">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Facial Treatment</h3>
+                                <p>Relaxing and rejuvenating facial session</p>
+                                <button class="view-btn" onclick="openLightbox(this.parentElement.parentElement.parentElement.querySelector('img'))">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hair Images -->
+                <div class="gallery-item" data-category="hair">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHw0fHxiZWF1dHklMjBzYWxvbnxlbnwwfHx8fDE3NTQxNTcwNjl8MA&ixlib=rb-4.1.0&q=85" alt="Hair Styling">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Hair Styling</h3>
+                                <p>Modern cut and style transformation</p>
+                                <button class="view-btn" onclick="openLightbox(this.parentElement.parentElement.parentElement.querySelector('img'))">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spa Images -->
+                <div class="gallery-item" data-category="spa">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwyfHxzcGElMjB0cmVhdG1lbnR8ZW58MHx8fHwxNzU0MTU3MDc1fDA&ixlib=rb-4.1.0&q=85" alt="Spa Treatment">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Spa Treatment</h3>
+                                <p>Relaxing massage and therapy session</p>
+                                <button class="view-btn" onclick="openLightbox(this.parentElement.parentElement.parentElement.querySelector('img'))">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More Images -->
+                <div class="gallery-item" data-category="bridal">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1589710751893-f9a6770ad71b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwyfHxiZWF1dHklMjBzYWxvbnxlbnwwfHx8fDE3NTQxNTcwNjl8MA&ixlib=rb-4.1.0&q=85" alt="Bridal Makeup 2">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Bridal Makeup</h3>
+                                <p>Elegant bridal transformation</p>
+                                <button class="view-btn" onclick="openLightbox(this.parentElement.parentElement.parentElement.querySelector('img'))">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="facial">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxiZWF1dHklMjBzYWxvbnxlbnwwfHx8fDE3NTQxNTcwNjl8MA&ixlib=rb-4.1.0&q=85" alt="Anti-aging Facial">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Anti-Aging Facial</h3>
+                                <p>Professional skincare treatment</p>
+                                <button class="view-btn" onclick="openLightbox(this.parentElement.parentElement.parentElement.querySelector('img'))">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="spa">
+                    <div class="gallery-image">
+                        <img src="https://images.pexels.com/photos/33224928/pexels-photo-33224928.jpeg" alt="Spa Interior">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Spa Interior</h3>
+                                <p>Serene and peaceful spa environment</p>
+                                <button class="view-btn" onclick="openLightbox(this.parentElement.parentElement.parentElement.querySelector('img'))">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="makeup">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1607774000480-de3f239fdd4c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwzfHxiZWF1dHklMjBzYWxvbnxlbnwwfHx8fDE3NTQxNTcwNjl8MA&ixlib=rb-4.1.0&q=85" alt="Natural Makeup">
+                        <div class="gallery-overlay">
+                            <div class="gallery-content">
+                                <h3>Natural Makeup</h3>
+                                <p>Subtle everyday beauty look</p>
+                                <button class="view-btn" onclick="openLightbox(this.parentElement.parentElement.parentElement.querySelector('img'))">
+                                    <i class="fas fa-eye"></i> View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-image" src="" alt="Gallery Image">
+        </div>
+    </div>
+
+    <!-- Before & After Section -->
+    <section class="before-after">
+        <div class="container">
+            <div class="section-header">
+                <h2>Before & After Transformations</h2>
+                <p>See the amazing results of our expert treatments</p>
+            </div>
+            <div class="transformation-grid">
+                <div class="transformation-card">
+                    <h3>Skin Rejuvenation Treatment</h3>
+                    <p>6-month facial treatment program results</p>
+                    <div class="before-after-images">
+                        <div class="before-image">
+                            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwxfHxiZWF1dHklMjBzYWxvbnxlbnwwfHx8fDE3NTQxNTcwNjl8MA&ixlib=rb-4.1.0&q=85" alt="Before Treatment">
+                            <span class="image-label">Before</span>
+                        </div>
+                        <div class="after-image">
+                            <img src="https://images.unsplash.com/photo-1589710751893-f9a6770ad71b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHwyfHxiZWF1dHklMjBzYWxvbnxlbnwwfHx8fDE3NTQxNTcwNjl8MA&ixlib=rb-4.1.0&q=85" alt="After Treatment">
+                            <span class="image-label">After</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready for Your Transformation?</h2>
+                <p>Book your appointment and let us help you achieve your beauty goals</p>
+                <div class="cta-buttons">
+                    <a href="tel:+919876543210" class="btn btn-primary">
+                        <i class="fas fa-phone"></i> Book Now
+                    </a>
+                    <a href="services.html" class="btn btn-secondary">View Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h3>REVIVE</h3>
+                        <span>Beauty Salon</span>
+                    </div>
+                    <p>Your premier destination for beauty and wellness in Navi Mumbai.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Facial Treatments</a></li>
+                        <li><a href="services.html">Hair Styling</a></li>
+                        <li><a href="services.html">Makeup</a></li>
+                        <li><a href="services.html">Spa & Wellness</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Barakha CHS, Shop no. 5, Plot No. 6, Sector 20D, Airoli Navi Mumbai - 400708</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-envelope"></i> info@revivebeauty.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 REVIVE Beauty Salon. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>
