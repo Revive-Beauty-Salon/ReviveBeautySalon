@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - REVIVE Beauty Salon</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -24,6 +25,7 @@
                 <a href="reviews.html" class="nav-link">Reviews</a>
                 <a href="gallery.html" class="nav-link active">Gallery</a>
             </div>
+            <a href="tel:+919876543210" class="btn btn-primary nav-cta"><i class="fas fa-phone"></i> Book Now</a>
             <div class="nav-toggle" id="nav-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -33,7 +35,7 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
         <div class="container">
             <h1>Gallery Showcase</h1>
             <p>Explore our work and get inspired by beautiful transformations</p>
@@ -41,7 +43,7 @@
     </section>
 
     <!-- Gallery Filter -->
-    <section class="gallery-filter">
+    <section class="gallery-filter" data-aos="fade-up">
         <div class="container">
             <div class="filter-buttons">
                 <button class="filter-btn active" data-filter="all">All</button>
@@ -55,7 +57,7 @@
     </section>
 
     <!-- Gallery Grid -->
-    <section class="gallery-grid-section">
+    <section class="gallery-grid-section" data-aos="fade-up">
         <div class="container">
             <div class="gallery-grid">
                 <!-- Bridal Images -->
@@ -211,7 +213,7 @@
     </div>
 
     <!-- Before & After Section -->
-    <section class="before-after">
+    <section class="before-after" data-aos="fade-up">
         <div class="container">
             <div class="section-header">
                 <h2>Before & After Transformations</h2>
@@ -237,7 +239,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta">
+    <section class="cta" data-aos="zoom-in">
         <div class="container">
             <div class="cta-content">
                 <h2>Ready for Your Transformation?</h2>
@@ -302,6 +304,16 @@
         </div>
     </footer>
 
+    <a href="#" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+    <div class="floating-cta">
+        <a href="tel:+919876543210" class="primary"><i class="fas fa-phone"></i> Call</a>
+        <a href="https://wa.me/919876543210" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="services.html"><i class="fas fa-list"></i> Services</a>
+    </div>
+    <a class="floating-whatsapp" href="https://wa.me/919876543210" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="script.js"></script>
     <script src="gallery.js"></script>
 </body>

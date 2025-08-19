@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reviews - REVIVE Beauty Salon</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -24,6 +25,7 @@
                 <a href="reviews.html" class="nav-link active">Reviews</a>
                 <a href="gallery.html" class="nav-link">Gallery</a>
             </div>
+            <a href="tel:+919876543210" class="btn btn-primary nav-cta"><i class="fas fa-phone"></i> Book Now</a>
             <div class="nav-toggle" id="nav-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -33,7 +35,7 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" data-aos="fade-down">
         <div class="container">
             <h1>Client Reviews & Testimonials</h1>
             <p>Hear what our satisfied clients have to say about their REVIVE experience</p>
@@ -41,7 +43,7 @@
     </section>
 
     <!-- Review Stats -->
-    <section class="review-stats">
+    <section class="review-stats" data-aos="fade-up">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-card">
@@ -72,7 +74,7 @@
     </section>
 
     <!-- Featured Reviews -->
-    <section class="featured-reviews">
+    <section class="featured-reviews" data-aos="fade-up">
         <div class="container">
             <div class="section-header">
                 <h2>Featured Client Reviews</h2>
@@ -233,7 +235,7 @@
     </section>
 
     <!-- Add Review Section -->
-    <section class="add-review">
+    <section class="add-review" data-aos="fade-up">
         <div class="container">
             <div class="section-header">
                 <h2>Share Your Experience</h2>
@@ -285,7 +287,7 @@
     </section>
 
     <!-- User Reviews Section -->
-    <section class="user-reviews" id="userReviewsSection" style="display: none;">
+    <section class="user-reviews" id="userReviewsSection" style="display: none;" data-aos="fade-up">
         <div class="container">
             <div class="section-header">
                 <h2>Recent Client Reviews</h2>
@@ -298,7 +300,7 @@
     </section>
 
     <!-- Review Categories -->
-    <section class="review-categories">
+    <section class="review-categories" data-aos="fade-up">
         <div class="container">
             <div class="section-header">
                 <h2>Reviews by Service</h2>
@@ -316,7 +318,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta">
+    <section class="cta" data-aos="zoom-in">
         <div class="container">
             <div class="cta-content">
                 <h2>Join Our Happy Clients</h2>
@@ -381,6 +383,16 @@
         </div>
     </footer>
 
+    <a href="#" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+    <div class="floating-cta">
+        <a href="tel:+919876543210" class="primary"><i class="fas fa-phone"></i> Call</a>
+        <a href="https://wa.me/919876543210" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="services.html"><i class="fas fa-list"></i> Services</a>
+    </div>
+    <a class="floating-whatsapp" href="https://wa.me/919876543210" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="script.js"></script>
     <script src="reviews.js"></script>
 </body>

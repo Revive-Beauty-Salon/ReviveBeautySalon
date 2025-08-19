@@ -48,15 +48,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Navbar background change on scroll
+    // Navbar background change on scroll (light theme)
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 100) {
-            navbar.style.background = 'rgba(45, 80, 22, 0.98)';
-            navbar.style.backdropFilter = 'blur(15px)';
+        if (window.scrollY > 40) {
+            navbar.style.background = 'rgba(255, 255, 255, 0.97)';
+            navbar.style.backdropFilter = 'blur(14px)';
+            navbar.style.boxShadow = '0 4px 14px rgba(0,0,0,0.06)';
         } else {
-            navbar.style.background = 'rgba(45, 80, 22, 0.95)';
+            navbar.style.background = 'rgba(255, 255, 255, 0.9)';
             navbar.style.backdropFilter = 'blur(10px)';
+            navbar.style.boxShadow = 'none';
         }
     });
 
@@ -178,4 +180,34 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Page load time:', loadTime + 'ms');
         }
     });
+
+    // Initialize AOS if loaded
+    if (window.AOS) {
+        AOS.init({
+            duration: 700,
+            easing: 'ease-out-quart',
+            once: true,
+            offset: 50
+        });
+    }
+
+    // Initialize Swiper hero if present
+    if (window.Swiper && document.querySelector('.hero-swiper')) {
+        new Swiper('.hero-swiper', {
+            loop: true,
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            pagination: { el: '.swiper-pagination', clickable: true },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }
+        });
+    }
+
+    // Back to top button
+    const backToTop = document.querySelector('.back-to-top');
+    if (backToTop) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) backToTop.classList.add('visible');
+            else backToTop.classList.remove('visible');
+        });
+        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
 });

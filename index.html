@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REVIVE Beauty Salon - Premium Beauty & Wellness Experience</title>
+    <meta name="description" content="REVIVE Beauty Salon in Airoli, Navi Mumbai. Premium facial, makeup, hair, and spa services. Book your appointment today.">
+    <meta name="theme-color" content="#1a3d0f">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -24,6 +28,7 @@
                 <a href="reviews.html" class="nav-link">Reviews</a>
                 <a href="gallery.html" class="nav-link">Gallery</a>
             </div>
+            <a href="tel:+919876543210" class="btn btn-primary nav-cta"><i class="fas fa-phone"></i> Book Now</a>
             <div class="nav-toggle" id="nav-toggle">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -35,26 +40,37 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">
-                <span class="hero-subtitle">Welcome to</span>
-                <span class="hero-main">REVIVE Beauty Salon</span>
-            </h1>
-            <p class="hero-description">
-                Experience the ultimate in beauty and wellness with our premium services. 
-                Transform your look, revive your spirit, and embrace your natural beauty.
-            </p>
-            <div class="hero-buttons">
-                <a href="services.html" class="btn btn-primary">Explore Services</a>
-                <a href="salon-finder.html" class="btn btn-secondary">Visit Us</a>
+            <div class="hero-copy" data-aos="fade-up">
+                <h1 class="hero-title">
+                    <span class="hero-subtitle">Welcome to</span>
+                    <span class="hero-main">REVIVE Beauty Salon</span>
+                </h1>
+                <p class="hero-description">
+                    Experience the ultimate in beauty and wellness with our premium services. 
+                    Transform your look, revive your spirit, and embrace your natural beauty.
+                </p>
+                <div class="hero-buttons">
+                    <a href="services.html" class="btn btn-primary">Explore Services</a>
+                    <a href="salon-finder.html" class="btn btn-secondary">Visit Us</a>
+                </div>
             </div>
-        </div>
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODF8MHwxfHNlYXJjaHw0fHxiZWF1dHklMjBzYWxvbnxlbnwwfHx8fDE3NTQxNTcwNjl8MA&ixlib=rb-4.1.0&q=85" alt="Luxury Beauty Salon Interior">
+            <div class="hero-image" data-aos="zoom-in" data-aos-delay="150">
+                <div class="swiper hero-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=1200&q=80" alt="Luxury Beauty Salon Interior"></div>
+                        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1607774000480-de3f239fdd4c?auto=format&fit=crop&w=1200&q=80" alt="Makeup Studio"></div>
+                        <div class="swiper-slide"><img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1200&q=80" alt="Spa & Wellness"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section class="features">
+    <section class="features" data-aos="fade-up">
         <div class="container">
             <div class="section-header">
                 <h2>Why Choose REVIVE?</h2>
@@ -94,7 +110,7 @@
     </section>
 
     <!-- Services Preview -->
-    <section class="services-preview">
+    <section class="services-preview" data-aos="fade-up">
         <div class="container">
             <div class="section-header">
                 <h2>Our Signature Services</h2>
@@ -136,7 +152,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta">
+    <section class="cta" data-aos="zoom-in">
         <div class="container">
             <div class="cta-content">
                 <h2>Ready to Transform Your Look?</h2>
@@ -201,6 +217,39 @@
         </div>
     </footer>
 
+    <a href="#" class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+    <div class="floating-cta">
+        <a href="tel:+919876543210" class="primary"><i class="fas fa-phone"></i> Call</a>
+        <a href="https://wa.me/919876543210" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="services.html"><i class="fas fa-list"></i> Services</a>
+    </div>
+
+    <a class="floating-whatsapp" href="https://wa.me/919876543210" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="script.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "REVIVE Beauty Salon",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Barakha CHS, Shop no. 5, Plot No. 6, Sector 20D",
+        "addressLocality": "Airoli",
+        "addressRegion": "Maharashtra",
+        "postalCode": "400708",
+        "addressCountry": "IN"
+      },
+      "telephone": "+91 98765 43210",
+      "url": "https://revivebeauty.example",
+      "image": "https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6",
+      "openingHours": "Mo-Su 10:00-20:00",
+      "priceRange": "₹₹"
+    }
+    </script>
 </body>
 </html>
